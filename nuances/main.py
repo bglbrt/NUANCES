@@ -1,8 +1,7 @@
 #!/usr/bin/env
 # -*- coding: utf-8 -*-
 
-# this source code is licensed under the Creative Commons Attribution Share Alike 4.0 license
-# full license text can be found at: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+# this source code is licensed under the MIT license found in the LICENSE file in the root directory of this source tree
 
 # I/O packages
 import os
@@ -11,12 +10,14 @@ import argparse
 import warnings
 
 # dependencies
+from data.preprocessing import Preprocessor
+from models.language_model import LanguageModel
 
 
 # define parser
 parser = argparse.ArgumentParser(prog="Nuances",
                                  description="A Tool for Contextual Word Embeddings' Graphical Analysis and Visualisation",
-                                 epilog="This source code is licensed under the Creative Commons Attribution Share Alike 4.0 license.")
+                                 epilog="This source code is licensed under a MIT license.")
 
 # define arguments
 parser.add_argument("--corpus", nargs="1", default=None, type=str, help="Path to .txt file or folder of .txt files containing the corpus.")
